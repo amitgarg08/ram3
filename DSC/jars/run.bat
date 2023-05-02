@@ -1,0 +1,1 @@
+"D:\DSC\jars\jdk-19\bin\java" -jar digital-sign-0.0.1-SNAPSHOT.jar

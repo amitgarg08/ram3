@@ -1,0 +1,77 @@
+2023-02-27 17:24:39.682 =info 7504 --- [main] com.mcx.serverApp.ServerAppApplication   : Starting ServerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 on DESKTOP-F7MK4QS with PID 7504 (D:\DSC\jars\serverApp-0.0.1-SNAPSHOT.jar started by dell in D:\DSC\jars)
+2023-02-27 17:24:39.686 =info 7504 --- [main] com.mcx.serverApp.ServerAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-27 17:24:41.138 =info 7504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-27 17:24:41.158 =info 7504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-27 17:24:41.159 =info 7504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-27 17:24:41.270 =info 7504 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-27 17:24:41.271 =info 7504 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1517 ms
+2023-02-27 17:24:44.630 =info 7504 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signatureController': Invocation of init method failed; nested exception is java.security.KeyStoreException: PKCS11 not found
+2023-02-27 17:24:44.634 =info 7504 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-27 17:24:44.650 =info 7504 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-27 17:24:44.690 =info 7504 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signatureController': Invocation of init method failed; nested exception is java.security.KeyStoreException: PKCS11 not found
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar!/:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar!/:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar!/:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar!/:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar!/:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar!/:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar!/:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar!/:2.7.8]
+	at com.mcx.serverApp.ServerAppApplication.main(ServerAppApplication.java:10) ~[classes!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[serverApp-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[serverApp-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[serverApp-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[serverApp-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: java.security.KeyStoreException: PKCS11 not found
+	at java.base/java.security.KeyStore.getInstance(KeyStore.java:872) ~[na:na]
+	at com.mcx.serverApp.SignatureController.initSign(SignatureController.java:52) ~[classes!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.25.jar!/:5.3.25]
+	... 24 common frames omitted
+Caused by: java.security.NoSuchAlgorithmException: PKCS11 KeyStore not available
+	at java.base/sun.security.jca.GetInstance.getInstance(GetInstance.java:159) ~[na:na]
+	at java.base/java.security.Security.getImpl(Security.java:692) ~[na:na]
+	at java.base/java.security.KeyStore.getInstance(KeyStore.java:869) ~[na:na]
+	... 30 common frames omitted
+
+2023-02-27 17:28:02.153 =info 5900 --- [main] com.mcx.serverApp.ServerAppApplication   : Starting ServerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 on DESKTOP-F7MK4QS with PID 5900 (D:\DSC\jars\serverApp-0.0.1-SNAPSHOT.jar started by dell in D:\DSC\jars)
+2023-02-27 17:28:02.159 =info 5900 --- [main] com.mcx.serverApp.ServerAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-27 17:28:03.292 =info 5900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-27 17:28:03.304 =info 5900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-27 17:28:03.304 =info 5900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-27 17:28:03.381 =info 5900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-27 17:28:03.381 =info 5900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1157 ms
+2023-02-27 17:28:03.771 =info 5900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-27 17:28:03.782 =info 5900 --- [main] com.mcx.serverApp.ServerAppApplication   : Started ServerAppApplication in 2.231 seconds (JVM running for 2.765)
+2023-02-27 17:56:50.625 =info 7892 --- [main] com.mcx.serverApp.ServerAppApplication   : Starting ServerAppApplication v0.0.1-SNAPSHOT using Java 19.0.2 on DESKTOP-F7MK4QS with PID 7892 (D:\DSC\jars\serverApp-0.0.1-SNAPSHOT.jar started by dell in D:\DSC\jars)
+2023-02-27 17:56:50.632 =info 7892 --- [main] com.mcx.serverApp.ServerAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-02-27 17:56:52.426 =info 7892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-02-27 17:56:52.442 =info 7892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-27 17:56:52.442 =info 7892 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-27 17:56:52.551 =info 7892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-27 17:56:52.551 =info 7892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1825 ms
+2023-02-27 17:56:52.973 =info 7892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-02-27 17:56:52.989 =info 7892 --- [main] com.mcx.serverApp.ServerAppApplication   : Started ServerAppApplication in 3.276 seconds (JVM running for 4.004)
+2023-02-27 17:57:01.595 =info 7892 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-27 17:57:01.596 =info 7892 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-27 17:57:01.598 =info 7892 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-02-27 17:57:01.681 =info 7892 --- [http-nio-8082-exec-1] com.mcx.serverApp.SignatureController    : Hash value retrieved by back-end service is :: [49, 75, 48, 24, 6, 9, 42, -122, 72, -122, -9, 13, 1, 9, 3, 49, 11, 6, 9, 42, -122, 72, -122, -9, 13, 1, 7, 1, 48, 47, 6, 9, 42, -122, 72, -122, -9, 13, 1, 9, 4, 49, 34, 4, 32, -80, 80, 85, -24, 57, 22, 37, -92, 29, 112, -53, -2, -57, 102, -68, -120, 41, 68, -15, 57, 107, -11, -60, -51, 104, -72, -82, -54, 62, 71, 6, 89]
